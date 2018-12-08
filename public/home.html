@@ -1,0 +1,102 @@
+<!doctype html>
+
+<html>
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyA9xA0zkFBestnPOp7zjCmTtL1rbjeUGt8",
+        authDomain: "mymememaster-60d3d.firebaseapp.com",
+        databaseURL: "https://mymememaster-60d3d.firebaseio.com",
+        projectId: "mymememaster-60d3d",
+        storageBucket: "mymememaster-60d3d.appspot.com",
+        messagingSenderId: "222637325563"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="js/home.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="Login" content="login">
+    <title>My Meme Master</title>
+  </head>
+
+  <body>
+    <div>
+      <h1>Generate your own meme</h1>
+      <div style="position: absolute; top: 1rem; right: 10rem;">
+        <div class="dropdown">
+          <img src="images/user.png" height="40px" width="40px">
+          <ul class="dropdown-content">
+            <li><a style="text-decoration: none;" href="myMemes.html">My Memes</a></li>
+            <li id="changePassword">Change Password</li>
+            <li id="signOut">Sign Out</li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+
+    <!-- <div>
+
+    </div> -->
+
+    <div class="controls" id="canvas_controls" style="display: none;">
+      <div id="x-out">x</div>
+
+      <div id="user_controls" style="margin: 30px; display: none;">
+        <div id="passError" style="display: none;"></div>
+        <h3>Change your password</h3>
+        Current Password: <input type="password" id="oldPass" value="" style="margin-bottom:10px;"/><br>
+        New Password: <input type="password" id="newPass" value="" style="margin-bottom:10px;"/><br>
+        Confirm New Password: <input type="password" id="newPass2" value="" style="margin-bottom:10px;"/><br>
+
+        <button type="button" id="updatePassword" onclick="checkPass()">Update Password</button>
+      </div>
+
+      <div id="upload_controls" style="margin: 30px; display: none;">
+        <div id="imgError" style="display: none;"></div>
+
+        <div class="import-btn" id="import-upload">
+          Upload Your Own Image
+          <input type="file" value="upload" id="fileButton" />
+        </div>
+
+        <div id="or-text">OR</div>
+
+        <input type="url" placeholder="Insert Image URL" id="upload-url" />
+
+        <button type="button" id="uploadButton" onclick="uploadFile()">Upload</button>
+      </div>
+    </div>
+
+
+    <div class="canvas-wrap">
+      <div style="margin-left: 25%;">
+        <div style="margin: 1rem; margin-left: 20%;">
+          <button type="button" id="uploadMyImg" onclick="showUploads()">Upload Your Own Image</button>
+        </div>
+
+        <div class="memeText">
+          <input type="text" id="topText" placeholder="Top Text" value="" /> <br>
+          <input type="text" id="bottomText" placeholder="Bottom Text" value="" />
+        </div>
+
+        <div class="saveContainer">
+          <button type="button" id="saveMeme" onclick="saveMeme()">Save Meme</button>
+        </div>
+
+        <canvas id="currentMeme" width="500px" height="500px">
+          <canvas id="canvasID" style="z-index: 9999;"></canvas>
+        </canvas>
+      </div>
+    </div>
+
+  </body>
+
+</html>

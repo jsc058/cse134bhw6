@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyA9xA0zkFBestnPOp7zjCmTtL1rbjeUGt8",
+        authDomain: "mymememaster-60d3d.firebaseapp.com",
+        databaseURL: "https://mymememaster-60d3d.firebaseio.com",
+        projectId: "mymememaster-60d3d",
+        storageBucket: "mymememaster-60d3d.appspot.com",
+        messagingSenderId: "222637325563"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="js/mymemes.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="Login" content="login">
+    <title>My Meme Master</title>
+  </head>
+
+  <body>
+    <div>
+      <h1>My Memes</h1>
+      <div style="position: absolute; top: 1rem; right: 10rem;">
+        <div class="dropdown">
+          <img src="images/user.png" height="40px" width="40px">
+          <ul class="dropdown-content">
+            <li><a style="text-decoration: none;" href="home.html">Create a Meme</a></li>
+            <li id="changePassword">Change Password</li>
+            <li id="signOut">Sign Out</li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+    </div>
+
+    <div class="controls" id="canvas_controls" style="display: none;">
+      <div id="x-out">x</div>
+
+      <div id="user_controls" style="margin: 30px; display: none;">
+        <div id="passError" style="display: none;"></div>
+        <h3>Change your password</h3>
+        Current Password: <input type="password" id="oldPass" value="" style="margin-bottom:10px;"/><br>
+        New Password: <input type="password" id="newPass" value="" style="margin-bottom:10px;"/><br>
+        Confirm New Password: <input type="password" id="newPass2" value="" style="margin-bottom:10px;"/><br>
+
+        <button type="button" id="updatePassword" onclick="checkPass()">Update Password</button>
+      </div>
+    </div>
+
+    <div id="myMemes">
+    </div>
+
+  </body>
+
+</html>

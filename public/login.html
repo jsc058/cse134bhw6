@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html>
+  <head>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyA9xA0zkFBestnPOp7zjCmTtL1rbjeUGt8",
+        authDomain: "mymememaster-60d3d.firebaseapp.com",
+        databaseURL: "https://mymememaster-60d3d.firebaseio.com",
+        projectId: "mymememaster-60d3d",
+        storageBucket: "mymememaster-60d3d.appspot.com",
+        messagingSenderId: "222637325563"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="js/login.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="Login" content="login">
+    <title>Meme Master</title>
+  </head>
+
+  <body>
+    <div class="main" id="login">
+      <h1>Meme Master</h1>
+      <input class="login_inputs" type="email" placeholder="Email" id="email_field"/></br>
+      <input class="login_inputs" type="password" placeholder="Password" id="password_field" style="margin-bottom: 10px;"/></br>
+
+      <button onclick="login()">Login</button>
+      <button onclick="createAccount()">Create Account</button>
+    </div>
+
+    <div class="main" id="signup" style="display: none;">
+      <h1>Create Meme Master Account</h1>
+
+      <input class="login_inputs" type="email" placeholder="Email" id="email_field2"/></br>
+      <input class="login_inputs" type="password" placeholder="Password" id="password_field2" style="margin-bottom: 10px;"/></br>
+
+      <button onclick="signUp()">SignUp</button>
+      <button onclick="cancel()">Cancel</button>
+    </div>
+
+</html>

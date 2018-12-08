@@ -1,0 +1,168 @@
+.main {
+  width: 25%;
+  margin: 0px auto;
+  margin-top: 250px;
+  padding: 20px;
+}
+
+.login_inputs {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.controls {
+  position: absolute;
+  left: 40%;
+  display: block;
+  width: 250px;
+  height: auto;
+  padding: 0px;
+  background-color: white;
+  border: 4px black solid;
+  z-index: 100;
+}
+
+#import-upload {
+  position: relative;
+  overflow: hidden;
+  direction: ltr;
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.import-btn {
+  background-color: #03A9F4;
+  border: 1px solid #1a8bbd;
+  border-radius: 7px;
+  padding: 5px;
+  color: white;
+}
+
+#or-text {
+  text-align: center;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+#fileButton {
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  font-size: 120px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0;
+}
+
+#upload-url {
+  width: 100%;
+  font-size: 1rem;
+  /* margin-bottom: 15px; */
+}
+
+#uploadButton {
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.controls #x-out {
+  position: absolute;
+  left: 10;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+  padding: 1px;
+  text-align: center;
+  color: #999;
+}
+
+.controls #x-out:hover {
+  color: #03A9F4;
+  background: #333;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-content li {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+.dropdown-content li:hover {background-color: #f1f1f1}
+
+#passError {
+  border: 1px solid #6d0c0c;
+  padding: 10px;
+  background-color: #f1c4c4;
+  font-style: red;
+  color: red;
+}
+
+#uploadMyImg {
+  font-size: 1rem;
+}
+
+.memeText input {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  width: 300px;
+}
+
+.saveContainer {
+  top: 10rem;
+  margin-left: 50%;
+  margin-top: -3rem;
+  margin-bottom: 2rem;
+}
+
+#saveMeme {
+  font-size: 1rem;
+}
+
+a:visited {
+    color: black;
+}
+
+.memeHolder {
+  display: inline-block;
+  margin: 1rem;
+}
+
+.buttonsArea {
+  margin: .5rem;
+}
+
+.memeButtons {
+  float: right;
+  margin-left: .5rem;
+}
+
+@media screen and (min-width: 480px) {
+
+}
